@@ -1,14 +1,13 @@
 import React from "react"
-import ReactDOM from 'react-dom';
 import RedBull from "./images/RedBull.png"
 import Pokerstars from "./images/Pokerstars.svg"
 import AOC from "./images/AOC.svg"
 import {SocialIcon} from 'react-social-icons';
 
-export default props => {
+const Footer = () => {
 
     return (
-        <div>
+        <div className="FooterPrincipal">
             <hr className="separator"></hr>
             <footer className="footer">
                 <div className="Social_Networks">
@@ -29,3 +28,4 @@ export default props => {
         </div>
     )
 }
+export default Footer;

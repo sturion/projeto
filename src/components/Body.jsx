@@ -7,9 +7,7 @@ import Repeticao from "./Repeticao";
 export default () =>
 <>
 
-<Card titulo="#04 - Repetição">
       <Repeticao></Repeticao>
-    </Card>
     <Card titulo="Componente Com Filhos">
       <ComFilhos>
         <ul>

@@ -5,15 +5,27 @@ html {
 .App {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background-color: #121212;
 }
 
 .Body {
   display: flex;
   flex-wrap: wrap;
+  justify-content:center;
+  margin-top: 130px;
+}
+
+.AllPages{
+  display: flex;
+  justify-content: center;
 }
 
 .slider {
+}
+
+.CardImage {
+  max-width:200px;
 }
 
 .Header {
@@ -25,12 +37,14 @@ html {
   );
   color: #fff;
   height: 130px;
+  display: flex;
   border-radius: 0px 0px 10px 10px;
   justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 5;
 }
 
 .Carousel {
@@ -38,6 +52,7 @@ html {
   position: relative;
   left: -5px;
   top: -5px;
+  z-index: 0;
 }
 
 .HashFuria {
@@ -51,6 +66,10 @@ html {
   border: 0;
   height: 2px;
   background-image: linear-gradient(to right, transparent, #ccc, transparent);
+}
+
+.FooterPrincipal{
+  width: 90%;
 }
 
 .PartnersLogos {
@@ -72,6 +91,12 @@ html {
 .footer {
   display: flex;
   justify-content: center;
+}
+
+.FooterRoute {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 
@@ -107,6 +132,12 @@ html {
   }
 }
 
+.pages-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .Menu {
   display: flex;
   justify-content: flex-start;
@@ -121,6 +152,40 @@ html {
   margin-top: -20px;
 }
 
-.Page {
-  padding-right: 10px;
+a{
+  text-decoration: none;
+}
+
+il a {
+  color: #fff;
+}
+
+il a:hover {
+  color: #0074D9;
+}
+
+.underline{
+  position: relative;
+  padding: 10px;
+  color: #fff;
+}
+
+.underline::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0074D9;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .underline:hover::before{
+    left: 0;
+    right: auto;
+    width: 100%;
+    color: #0074D9;
+  }
 }

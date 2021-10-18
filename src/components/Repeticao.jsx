@@ -1,23 +1,28 @@
 import React from "react"
-
+import Card from "./layout/Card";
 import produtos from '../data/produtos'
 
-export default props => {
+function getProdutosListItem() {
+    return produtos.map (prod => {
+        return <li key={prod.id}>
+            <div className={`${prod.game}Players`}>
+            <img src={prod.imagem} className="CardImage"/>
+            {prod.id} - {prod.nome} - R$ {prod.preco}
+            <Card>{prod.nome}</Card>
+            </div>
+            </li>
+    })
+}
 
-    function getProdutosListItem() {
-        return produtos.map (prod => {
-            return <li key={prod.id}>
-                {prod.id} - {prod.nome} - R$ {prod.preco}
-                </li>
-        })
-    }
+const Repeticao = () => {
 
     return (
         <div>
-            <h2>Repetição</h2>
+            <h2>Repeat</h2>
             <ul>
                 {getProdutosListItem()}
             </ul>
         </div>
     )
 }
+export default Repeticao;

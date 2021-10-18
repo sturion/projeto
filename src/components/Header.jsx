@@ -1,7 +1,8 @@
 import React from "react";
 import LogoFuria from "./images/FuriaLogo.png";
+import { BrowserRouter, Link } from 'react-router-dom';
 
-export default (props) => {
+const Header = () => {
   return (
     <div>
       <header className="Menu">
@@ -10,10 +11,10 @@ export default (props) => {
             <img src={LogoFuria} className="header-logo-furia" />
           </il>
         </ul>
-        <ul className="PagesList">
-          <il className="Page"><div className="effect-one"><a className="PageLink" href="#">Home</a></div></il>
-          <il className="Page"><a className="PageLink" href="#">Teams</a></il>
-          <il className="Page"><a className="PageLink" href="#">About</a></il>
+        <ul className="pages-list">
+          <Link to="/" className="underline">Home</Link>
+          <Link to="/teams" className="underline">Teams</Link>
+          <Link to="/sobre" className="underline">Manifesto</Link>
         </ul>
         <div className="HashFuria">
           <p className="HashtagDDF">#DIADEFURIA</p>
@@ -22,3 +23,4 @@ export default (props) => {
     </div>
   );
 };
+export default Header;
